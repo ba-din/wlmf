@@ -1,0 +1,7 @@
+.partnerWithImg {
+  filter: grayscale(1);
+
+  &:hover {
+    filter: none;
+  }
+}
