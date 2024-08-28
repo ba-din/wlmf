@@ -78,6 +78,7 @@ export default function HomePage() {
               src="/img/rasing-flag.png"
               alt="waving flag"
               width={350}
+              height={200}
             />
             <p className="mt-5 text-justify ps-5 pe-5 text-lg leading-10 md:text-center">
               Dedicated to making a positive impact in our community and beyond.
