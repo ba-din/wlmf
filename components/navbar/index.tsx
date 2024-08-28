@@ -49,10 +49,9 @@ export const HomeNavbar: FC<Record<string, never>> = function () {
             <Navbar.Brand href="/">
               <Image
                 alt="WLMF logo"
-                src="/img/logo1.webp"
+                src="/img/logo2.png"
                 width="32"
                 height="32"
-                priority
               />
               <span className="self-end whitespace-nowrap px-3 text-xl font-semibold dark:text-white">
                 WLMF

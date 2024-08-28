@@ -1,19 +1,17 @@
-import Image from "next/image";
 import BannerBgComponent from "../../components/banner";
 import CurrentProjects from "@/components/current-projects";
-
-import logo1 from "@/public/img/logo2.png";
 import styles from "@/components/banner/banner.module.scss";
 
 import bannerImg1 from "@/public/img/ma-ma.jpg";
 import bannerImg2 from "@/public/img/banner2.jpg";
-import wavinFlagImg from "@/public/img/rasing-flag.png";
 
 import CounterArea from "@/components/counter-area/index";
 import PartnersWith from "@/components/partners-with";
-import Currencies from "@/components/currencies";
+import ParticipantCountires from '@/components/participant-contries'
 import OurFamily from "@/components/our-family";
 import PreviousProjects from "@/components/previous-project";
+import Image from "next/image";
+import logo2 from "@/public/img/logo2.png"
 
 export default function HomePage() {
   return (
@@ -36,7 +34,7 @@ export default function HomePage() {
                   </div>
 
                   <div className="bg-white flex items-center justify-center min-w-[300px] min-h-[300px] rounded-full">
-                    <Image src={logo1} alt="WLMF logo" width={300} />
+                    <Image src={logo2} alt="WLMF logo" width={300} height={300} />
                   </div>
                 </div>
               </div>
@@ -77,10 +75,9 @@ export default function HomePage() {
 
           <div className="flex flex-col items-center justify-center mt-10">
             <Image
-              src={wavinFlagImg}
+              src="/img/rasing-flag.png"
               alt="waving flag"
               width={350}
-              priority={true}
             />
             <p className="mt-5 text-justify ps-5 pe-5 text-lg leading-10 md:text-center">
               Dedicated to making a positive impact in our community and beyond.
@@ -128,7 +125,7 @@ export default function HomePage() {
         id="currencies"
         className="flex flex-col items-center justify-start bg-[#FFFFFF]"
       >
-        <Currencies />
+        <ParticipantCountires />
       </section>
 
 
@@ -136,7 +133,17 @@ export default function HomePage() {
         id="currencies"
         className="flex flex-col items-center justify-start bg-[#F5F5F5]"
       >
-        <PreviousProjects />
+        <div className="container flex flex-col mt-10 mb-10 md:mt-20 md:mb-20">
+          <h2 className="text-3xl text-center font-bold text-[#070E57]">
+            Previous Project
+          </h2>
+          <h3 className="text-center text-[#920100]">The Unity is Our Strength</h3>
+
+          <div className="relative w-full h-auto">
+            <PreviousProjects />
+          </div>
+        </div>
+
       </section>
 
 

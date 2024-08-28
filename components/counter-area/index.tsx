@@ -10,7 +10,7 @@ export default function CounterArea() {
         <div className="flex flex-col items-center justify-center mb-[80px] mt-[80px] md:mb-0 md:mt-0">
           <FaMoneyBillWave className="text-7xl text-[#070E57]" />
           <h3 className="text-5xl uppercase mt-3 text-[#920100] font-extrabold">
-            <CounterAnimation counter="[counter-set:_num_var(--num-raised)]" prefix="$" postfix="M" />
+            <CounterAnimation counter="[counter-set:_num_var(--num-raised)]" prefix="$" postfix="M" amount="" />
           </h3>
           <h5 className="text-3xl uppercase mt-2 text-[#920100] font-extrabold">have been raised</h5>
         </div>
@@ -18,7 +18,7 @@ export default function CounterArea() {
         <div className="flex flex-col items-center justify-center mb-[80px] md:mb-0">
           <GiReceiveMoney className="text-7xl text-[#070E57]" />
           <h3 className="text-5xl uppercase mt-3 text-[#920100] font-extrabold">
-            <CounterAnimation counter="[counter-set:_num_var(--num-supporters)]" />
+            <CounterAnimation counter="[counter-set:_num_var(--num-supporters)]" amount="" />
           </h3>
 
           <h5 className="text-3xl uppercase mt-2 text-[#920100] font-extrabold">supporters</h5>
@@ -27,7 +27,7 @@ export default function CounterArea() {
         <div className="flex flex-col items-center justify-center mb-[80px] md:mb-0">
           <VscOrganization className="text-7xl text-[#070E57]" />
           <h3 className="text-5xl uppercase mt-3 text-[#920100] font-extrabold">
-            <CounterAnimation counter="[counter-set:_num_var(--num-organizations)]" postfix="+" />
+            <CounterAnimation counter="[counter-set:_num_var(--num-organizations)]" postfix="+" amount=""  />
             <span className="text-2xl uppercase"> organizations</span>
           </h3>
           <h5 className="text-3xl uppercase mt-2 text-[#920100] font-extrabold">partners with</h5>

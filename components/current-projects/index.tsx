@@ -1,16 +1,17 @@
 'use client';
 
-import Image from "next/image";
-
 import ScrollingProgressBar from "../scrolling-progress-bar";
 
 import CounterAnimation from "../counter-animation";
 import Modal from "@/components/modal";
 import { useState } from "react";
 
-import CurrentProjectsData from '@/public/js/data/CurrentProjectsData'
+import styles from '../counter-animation/counter-animation.module.scss';
 
-function supportedAmountComponent(supportedAmount: { counter: string, prefix?: string, postfix?: string }) {
+import CurrentProjectsData from '@/public/js/data/CurrentProjectsData'
+import Image from "next/image";
+
+function SupportedAmountComponent(supportedAmount: { amount: string, counter: string, prefix?: string, postfix?: string }) {
     return (
         <div className="flex flex-col items-center mt-2.5 mb-5" >
             <div className="w-full flex items-center space-x-1">
@@ -22,7 +23,7 @@ function supportedAmountComponent(supportedAmount: { counter: string, prefix?: s
             <div className="w-full flex items-center space-x-1 rtl:space-x-reverse">
                 <div className="w-full mb-1 min-h-[52px] flex max-h-[52px] items-center justify-center">
                     <h3 className="w-full text-4xl text-center font-extrabold text-[#920100]">
-                        <CounterAnimation counter={supportedAmount.counter} prefix={supportedAmount.prefix} postfix={supportedAmount.postfix} />
+                        <CounterAnimation amount={supportedAmount.amount} counter={supportedAmount.counter} prefix={supportedAmount.prefix} postfix={supportedAmount.postfix} />
                     </h3>
                 </div>
             </div>
@@ -64,16 +65,12 @@ export default function CurrentProjects() {
                                     <Image className="p-8 rounded-t-lg w-full" src={project.logoImg} alt={project.title} width={100} height={100} />
                                 </a>
                                 <div className="px-5 pb-5">
-                                    <div className="min-h-[100px] max-h-[100px]">
-                                        <h5 className="min-h-[100px] max-h-[100px] text-xl font-semibold tracking-tight text-gray-900 dark:text-white">{project.desc}</h5>
-                                    </div>
-
                                     {
-                                        project.progress && progressComponent(project.progress)
+                                        project.progress && <ScrollingProgressBar progressPercent={project.progress.amount} counter={project.progress.counter} />
                                     }
 
                                     {
-                                        project.supportedAmount && supportedAmountComponent(project.supportedAmount)
+                                        project.supportedAmount && <SupportedAmountComponent amount={project.supportedAmount.amount} counter={project.supportedAmount.counter} prefix={project.supportedAmount.prefix} postfix={project.supportedAmount.postfix} />
                                     }
 
                                     {
@@ -110,6 +107,6 @@ export default function CurrentProjects() {
                 }
             </div>
         </>
-        
+
     );
 }

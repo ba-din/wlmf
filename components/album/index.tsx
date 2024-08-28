@@ -11,14 +11,14 @@ import { faEye } from '@fortawesome/free-regular-svg-icons'
 
 const breakpoints = [3840, 1920, 1080, 640, 384, 256, 128];
 
-function getSlides(imgList: StaticImageData[]) {
+function getSlides(imgList: string[]) {
 
   return imgList.map((certImg) => ({
-    src: certImg.src,
+    src: certImg,
     width: 500,
     height: 350,
     srcSet: breakpoints.map((breakpoint) => ({
-      src: certImg.src,
+      src: certImg,
       width: breakpoint,
       height: Math.round((350 / 500) * breakpoint),
     })),
@@ -28,7 +28,7 @@ function getSlides(imgList: StaticImageData[]) {
 
 export default function Album(
   { imgList = [] }:
-    Readonly<{ imgList: StaticImageData[] }>
+    Readonly<{ imgList: string[] }>
 ) {
   const { openLightbox, renderLightbox } = useLightbox();
   const [imgSlides, setImgSlides] = useState(slides);
@@ -51,12 +51,11 @@ export default function Album(
     <>
       {
         imgList.map((img, index) => (
-          <div key={img.src} className={`flex flex-col items-center justify-start ${styles.certificateImg}`} onClick={() => reorderImg(index)}>
+          <div key={index + index} className={`flex flex-col items-center justify-start ${styles.certificateImg}`} onClick={() => reorderImg(index)}>
             <Image src={img} alt=""
               width={500}
               height={350}
               className="p-5 md:p-0"
-              priority={true}
             />
 
             <div className={styles.certificateOverlay}>

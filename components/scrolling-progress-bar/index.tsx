@@ -3,9 +3,6 @@ import CounterAnimation from "../counter-animation";
 import ScrollInViewComponent from "../scroll-in-view";
 import styles from "./scrolling-progress-bar.module.scss";
 
-
-
-
 export default function ScrollingProgressBar(
   { progressPercent, counter }: Readonly<{ progressPercent: string, counter?: string }>
 ) {
@@ -16,7 +13,7 @@ export default function ScrollingProgressBar(
       <div className="w-full flex items-center space-x-1 rtl:space-x-reverse">
         <div className="w-full  flex justify-between mb-1 text-[#070E57]">
           <span className="text-base font-medium dark:text-white">Progress</span>
-          {counter ? <CounterAnimation counter={counter} postfix="%" /> : ''}
+          {counter ? <CounterAnimation counter={counter} postfix="%" amount={progressPercent} /> : ''}
         </div>
       </div>
       <div className="w-full flex items-center space-x-1 rtl:space-x-reverse">

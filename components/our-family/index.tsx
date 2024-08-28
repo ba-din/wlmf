@@ -1,50 +1,5 @@
-import manAvatar from "@/public/img/avatars/man-avatar.png";
-import ladyAvatar from "@/public/img/avatars/lady-avatar.png";
-import Image from "next/image";
-
-const personList = [
-  {
-    name: "Someone",
-    postion: "operation",
-    avatar: manAvatar
-  },
-
-  {
-    name: "Someone",
-    postion: "operation",
-    avatar: ladyAvatar
-  },
-
-  {
-    name: "Someone",
-    postion: "operation",
-    avatar: manAvatar
-  },
-
-  {
-    name: "Someone",
-    postion: "operation",
-    avatar: ladyAvatar
-  },
-
-  {
-    name: "Someone",
-    postion: "operation",
-    avatar: manAvatar
-  },
-
-  {
-    name: "Someone",
-    postion: "operation",
-    avatar: ladyAvatar
-  },
-
-  {
-    name: "50+",
-    postion: "Professionals",
-    avatar: ladyAvatar
-  },
-]
+import OurFamilyData from '@/public/js/data/OurFamilyData'
+import Image from 'next/image';
 
 export default function OurFamily() {
   return (
@@ -59,7 +14,7 @@ export default function OurFamily() {
 
       <div className="w-full mt-5 grid grid-cols-3 gap-10 p-3 md:grid-cols-4 md:p-0">
         {
-          personList.map((person, index) => (
+          OurFamilyData.it.map((person, index) => (
             <div className="grid grid-cols-1 md:grid-cols-2" key={person.name + "_" + index}>
               <div className="flex flex-col justify-center items-center md:items-end">
                 <div className="relative flex justify-center items-center">

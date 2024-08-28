@@ -1,6 +1,7 @@
-const CurrentProjectsData = [
+const ParticipantCountiresData = [
     {
         title: "The Key",
+        desc: "သင့်အနာဂတ်သစ်ကို “TheKey” နဲ့အတူ ဖွင့်လှစ်လိုက်ကြရအောင်…",
         logoImg: '/img/current-projects/the-key-logo.png',
         progress: {
             amount: '75%',
@@ -22,9 +23,9 @@ const CurrentProjectsData = [
     },
     {
         title: "Learn With PT",
+        desc: "ဒေါက်တာဖြိုးသီဟရဲ့ Learn with PT Online Class",
         logoImg: '/img/current-projects/learn-with-pth-logo.png',
         supportedAmount: {
-            amount: '50',
             prefix: '',
             postfix: 'M+ MMK',
             counter: '[counter-set:_num_var(--num-lwpt)]'
@@ -40,9 +41,9 @@ const CurrentProjectsData = [
     },
     {
         title: "htout-pote",
+        desc: "ထောက်ပို့ထီ project",
         logoImg: '/img/current-projects/htout-pote-logo.png',
         supportedAmount: {
-            amount: '30',
             prefix: '',
             postfix: 'M+ MMK',
             counter: '[counter-set:_num_var(--num-htoutpote)]'
@@ -58,6 +59,7 @@ const CurrentProjectsData = [
     },
     {
         title: "thu-wa-na",
+        desc: "ရွှေရောင်တောက်ပတဲ့ သထုံခရိုင် သုဝဏ္ဏဘူမိနဲ့ သထုံကို အားဖြည့်ထောက်ကူကြပါဦးစို့နော်..",
         logoImg: '/img/current-projects/thuwanaLogo.png',
         progress: {
             amount: '25%',
@@ -79,4 +81,4 @@ const CurrentProjectsData = [
     },
 ]
 
-export default CurrentProjectsData
+export default ParticipantCountiresData

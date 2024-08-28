@@ -1,56 +1,54 @@
 import Image from "next/image";
-import logo2 from "@/public/img/logo2.png";
-
 import styles from "./partners-with.module.scss";
 
 const imgList = [
   {
-    src: logo2,
+    src: '/img/logo2.png',
     alt: 'wlmf',
     url: 'https://www.facebook.com/GenZRevolution2021'
   },
   {
-    src: logo2,
+    src: '/img/logo2.png',
     alt: 'wlmf',
     url: 'https://www.facebook.com/GenZRevolution2021'
   },
   {
-    src: logo2,
+    src: '/img/logo2.png',
     alt: 'wlmf',
     url: 'https://www.facebook.com/GenZRevolution2021'
   },
   {
-    src: logo2,
+    src: '/img/logo2.png',
     alt: 'wlmf',
     url: 'https://www.facebook.com/GenZRevolution2021'
   },
   {
-    src: logo2,
+    src: '/img/logo2.png',
     alt: 'wlmf',
     url: 'https://www.facebook.com/GenZRevolution2021'
   },
   {
-    src: logo2,
+    src: '/img/logo2.png',
     alt: 'wlmf',
     url: 'https://www.facebook.com/GenZRevolution2021'
   },
   {
-    src: logo2,
+    src: '/img/logo2.png',
     alt: 'wlmf',
     url: 'https://www.facebook.com/GenZRevolution2021'
   },
   {
-    src: logo2,
+    src: '/img/logo2.png',
     alt: 'wlmf',
     url: 'https://www.facebook.com/GenZRevolution2021'
   },
   {
-    src: logo2,
+    src: '/img/logo2.png',
     alt: 'wlmf',
     url: 'https://www.facebook.com/GenZRevolution2021'
   },
   {
-    src: logo2,
+    src: '/img/logo2.png',
     alt: 'wlmf',
     url: 'https://www.facebook.com/GenZRevolution2021'
   }
@@ -71,7 +69,7 @@ export default function PartnersWith() {
             <div className="flex flex-col items-center justify-center mb-[20px] mt-[20px] md:mb-0 md:mt-0" key={'partner-with-'+index}>
               <div className="rounded-full ">
                 <a href={img?.url || 'javascript:void(0)'} target="_blank" rel="noopener noreferrer" >
-                  <Image src={img.src} width={150} alt={img.alt} className={styles.partnerWithImg} />
+                  <Image src={img.src} width={150} height={150} alt={img.alt} className={styles.partnerWithImg} />
                 </a>
               </div>
             </div>
