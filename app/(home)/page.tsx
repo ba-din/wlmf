@@ -62,7 +62,7 @@ export default function HomePage() {
       </div>
 
       <section
-        id="mission"
+        id="our-mission"
         className="flex flex-col items-center justify-center bg-[#FFFFFF]"
       >
         <div className="container flex flex-col mt-10 mb-10 md:mt-20 md:mb-20">
@@ -100,7 +100,7 @@ export default function HomePage() {
       </div>
 
       <section
-        id="project"
+        id="current-projects"
         className="flex flex-col items-center justify-start"
       >
         <BannerBgComponent
@@ -123,7 +123,7 @@ export default function HomePage() {
       </section>
 
       <section
-        id="currencies"
+        id="participant-countries-currencies"
         className="flex flex-col items-center justify-start bg-[#FFFFFF]"
       >
         <ParticipantCountires />
@@ -131,7 +131,7 @@ export default function HomePage() {
 
 
       <section
-        id="currencies"
+        id="previous-projects"
         className="flex flex-col items-center justify-start bg-[#F5F5F5]"
       >
         <div className="container flex flex-col mt-10 mb-10 md:mt-20 md:mb-20">
@@ -149,14 +149,14 @@ export default function HomePage() {
 
 
       <section
-        id="currencies"
+        id="our-family"
         className="flex flex-col items-center justify-start bg-[#FFFFFF]"
       >
         <OurFamily />
       </section>
 
       <section
-        id="partner"
+        id="partner-with"
         className="flex flex-col items-center justify-center bg-[#FFFFFF]"
       >
         <PartnersWith />

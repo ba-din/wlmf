@@ -16,7 +16,7 @@ export const HomeNavbar: FC<Record<string, never>> = function () {
   useEffect(() => {
     const handleScroll = () => {
       const scrollPosition = window.scrollY;
-      const sections = ["mission", "project", "partner", "certificate"];
+      const sections = ["our-mission", "current-projects", "participant-countries-currencies", "previous-projects", "our-family", "partner-with"];
       let activeSection = "";
 
       for (const section of sections) {
@@ -70,20 +70,26 @@ export const HomeNavbar: FC<Record<string, never>> = function () {
             <Navbar.Link href="/" active={pathname === "/" && !activeSection}>
               Home
             </Navbar.Link>
-            <Navbar.Link href="#mission" active={activeSection === "mission"}>
-              Mission
+            <Navbar.Link href="#our-mission" active={activeSection === "our-mission"}>
+              Our Mission
             </Navbar.Link>
-            <Navbar.Link href="#project" active={activeSection === "project"}>
-              Projects
+            <Navbar.Link href="#current-projects" active={activeSection === "current-projects"}>
+              Current Projects
             </Navbar.Link>
-            <Navbar.Link href="#partner" active={activeSection === "partner"}>
-              Partners
+            <Navbar.Link href="#participant-countries-currencies" active={activeSection === "participant-countries-currencies"}>
+              Participant Counties & Currencies
+            </Navbar.Link>
+            <Navbar.Link href="#previous-projects" active={activeSection === "previous-projects"}>
+              Previous Projects
+            </Navbar.Link>
+            <Navbar.Link href="#our-family" active={activeSection === "our-family"}>
+              Our Family
             </Navbar.Link>
             <Navbar.Link
-              href="#certificate"
-              active={activeSection === "certificate"}
+              href="#partner-with"
+              active={activeSection === "partner-with"}
             >
-              Certificates
+              Partner With
             </Navbar.Link>
           </Navbar.Collapse>
           <div className="flex md:flex-1 md:justify-end">

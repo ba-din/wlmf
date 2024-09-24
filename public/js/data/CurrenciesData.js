@@ -45,6 +45,11 @@ const CurrenciesData = [
     flag: '/img/flags/krw.svg',
   },
   {
+    country: 'india',
+    currencyCode: 'inr',
+    flag: '/img/flags/inr.png',
+  },
+  {
     country: 'malaysia',
     currencyCode: 'myr',
     flag: '/img/flags/myr.svg',
@@ -98,6 +103,16 @@ const CurrenciesData = [
     country: '',
     currencyCode: 'crypto',
     flag: '/img/flags/crypto.png',
+  },
+  {
+    country: '',
+    currencyCode: 'nugPay',
+    flag: '/img/flags/nugPay.png',
+  },
+  {
+    country: '',
+    currencyCode: 'sdb',
+    flag: '/img/flags/sdb.webp',
   },
   
 ];

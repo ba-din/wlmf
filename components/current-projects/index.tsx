@@ -6,9 +6,8 @@ import CounterAnimation from "../counter-animation";
 import Modal from "@/components/modal";
 import { useState } from "react";
 
-import styles from '../counter-animation/counter-animation.module.scss';
-
 import CurrentProjectsData from '@/public/js/data/CurrentProjectsData'
+import BuyTicketDialog from '@/components/buy-ticket-dialog'
 import Image from "next/image";
 
 function SupportedAmountComponent(supportedAmount: { amount: string, counter: string, prefix?: string, postfix?: string }) {
@@ -40,14 +39,46 @@ function priceComponent(price: { priceLabel?: string, amount?: string, currency?
     );
 }
 
-function progressComponent(progress: { amount: string, counter?: string }) {
-    return (
-        <ScrollingProgressBar progressPercent={progress.amount} counter={progress.counter} ></ScrollingProgressBar>
-    );
-}
-
 export default function CurrentProjects() {
     const [isOpen, setIsOpen] = useState(false);
+    const [openBuyDialog, setOpenBuyDialog] = useState(false);
+    const [selectedProject, setSelectedProject] = useState({
+        title: '',
+        code: '',
+        logoImg: '',
+        rightCTA: {
+            btnLabel: 'buy ticket'
+        }
+    });
+
+    const emptyProjectState = () => {
+        setSelectedProject({
+            title: '',
+            code: '',
+            logoImg: '',
+            rightCTA: {
+                btnLabel: 'buy ticket'
+            }
+        })
+    }
+
+    const handleRightCtaBtn = (
+        event: any,
+        project: { title: string, code: string, logoImg: string, rightCTA: { btnLabel: string, countryFrList?: Array<{}>, url?: string } }
+    ) => {
+        if (project.rightCTA.url) {
+           
+        } else {
+            event.preventDefault()
+            setOpenBuyDialog(true)
+            setSelectedProject(project)
+        }
+    }
+
+    const handleBuyTicketDialogClose = () => {
+        setOpenBuyDialog(false)
+        emptyProjectState()
+    }
 
     return (
         <>
@@ -56,7 +87,7 @@ export default function CurrentProjects() {
                 onOk={() => setIsOpen(false)}
             />
 
-            <div className="mt-5 grid grid-cols-1 m-3 xl:grid-cols-4 lg:grid-cols-3 md:grid-cols-2 md:gap-4">
+            <div className="mt-5 grid grid-cols-1 m-3 xl:grid-cols-5 lg:grid-cols-3ျအနော md:grid-cols-3 md:gap-4">
                 {
                     CurrentProjectsData.map((project) => (
                         <div className="flex flex-col items-center justify-start mt-5 md:mt-0" key={project.title}>
@@ -88,7 +119,12 @@ export default function CurrentProjects() {
 
                                         {
                                             project.rightCTA ? (
-                                                <a href={project.rightCTA.url} target="blank" className="text-white bg-[#920100] hover:bg-[#750100] focus:ring-4 focus:outline-none focus:ring-[#8c1b1b] font-medium rounded-lg text-sm px-5 py-2.5 text-center">
+                                                <a
+                                                    href={project.rightCTA.url ? project.rightCTA.url : "#"}
+                                                    target="blank"
+                                                    className="text-white bg-[#920100] hover:bg-[#750100] focus:ring-4 focus:outline-none focus:ring-[#8c1b1b] font-medium rounded-lg text-sm px-5 py-2.5 text-center"
+                                                    onClick={(event) => handleRightCtaBtn(event, { title: project.title, code: project.title, logoImg: project.logoImg, rightCTA: project.rightCTA})}
+                                                >
                                                     {project.rightCTA.btnLabel}
                                                 </a>
                                                 // <button
@@ -106,6 +142,8 @@ export default function CurrentProjects() {
                     ))
                 }
             </div>
+
+            <BuyTicketDialog isOpen={openBuyDialog} onHide={handleBuyTicketDialogClose} project={selectedProject} />
         </>
 
     );

@@ -27,24 +27,34 @@ export const HomeFooter: FC<Record<string, never>> = function () {
           <div className="flex flex-col mb-10 gap-4">
             <h1 className="text-xl font-semibold">Quick links</h1>
             <FooterLinkGroup className="text-white">
-              <Footer.Link href="#mission" className="mb-2">
+              <Footer.Link href="#our-mission" className="mb-2">
                 <HiChevronRight className="w-5 h-5 inline" />
-                Mission
+                Our Mission
               </Footer.Link>
               <FooterDivider className="lg:mt-0 lg:mb-2 border-[#4f4b6b]" />
-              <Footer.Link href="#project" className="mb-2">
+              <Footer.Link href="#current-projects" className="mb-2">
                 <HiChevronRight className="w-5 h-5 inline" />
-                Projects
+                Current Projects
               </Footer.Link>
               <FooterDivider className="lg:mt-0 lg:mb-2 border-[#4f4b6b]" />
-              <Footer.Link href="#partner" className="mb-2">
+              <Footer.Link href="#participant-countries-currencies" className="mb-2">
                 <HiChevronRight className="w-5 h-5 inline" />
-                Partners
+                Participant Counties & Currencies
               </Footer.Link>
               <FooterDivider className="lg:mt-0 lg:mb-2 border-[#4f4b6b]" />
-              <Footer.Link href="#certificate" className="mb-2">
+              <Footer.Link href="#previous-projects" className="mb-2">
                 <HiChevronRight className="w-5 h-5 inline" />
-                Certificates
+                Previous Projects
+              </Footer.Link>
+              <FooterDivider className="lg:mt-0 lg:mb-2 border-[#4f4b6b]" />
+              <Footer.Link href="#our-family" className="mb-2">
+                <HiChevronRight className="w-5 h-5 inline" />
+                Our Family
+              </Footer.Link>
+              <FooterDivider className="lg:mt-0 lg:mb-2 border-[#4f4b6b]" />
+              <Footer.Link href="#partner-with" className="mb-2">
+                <HiChevronRight className="w-5 h-5 inline" />
+                Partner With
               </Footer.Link>
             </FooterLinkGroup>
           </div>

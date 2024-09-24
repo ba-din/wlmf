@@ -59,11 +59,11 @@ const PreviousProjComponent = (project: any, prjIndex: Number) => {
         />
       </a>
       <div className="px-5 pb-5 w-full">
-        {/* <div className="min-h-[100px] max-h-[100px]">
-          <h5 className="min-h-[100px] max-h-[100px] text-xl font-semibold tracking-tight text-gray-900 dark:text-white">
-            {project.desc}
+        <div className="min-h-[50px] max-h-[50px]">
+          <h5 className="min-h-[50px] max-h-[50px] text-center text-xl font-semibold tracking-tight text-gray-900 dark:text-white">
+            {project.title}
           </h5>
-        </div> */}
+        </div>
 
         {project.supportedAmount &&
           supportedAmountComponent(project.supportedAmount)}
