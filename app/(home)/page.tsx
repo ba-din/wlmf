@@ -155,12 +155,12 @@ export default function HomePage() {
         <OurFamily />
       </section>
 
-      <section
+      {/* <section
         id="partner-with"
         className="flex flex-col items-center justify-center bg-[#FFFFFF]"
       >
         <PartnersWith />
-      </section>
+      </section> */}
     </main>
   );
 }

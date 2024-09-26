@@ -6,19 +6,19 @@ const OurFamilyData = [
       {
         name: "Team1 Someone",
         postion: "operation",
-        avatar: "/img/avatars/man-avatar.png",
+        avatar: "/img/avatars/avatar1.jpeg",
       },
 
       {
         name: "Team1 Someone",
         postion: "operation",
-        avatar: "/img/avatars/lady-avatar.png",
+        avatar: "/img/avatars/avatar2.jpeg",
       },
 
       {
         name: "Team1 Someone",
         postion: "operation",
-        avatar: "/img/avatars/man-avatar.png",
+        avatar: "/img/avatars/avatar3.jpeg",
       },
     ],
   },
@@ -29,19 +29,19 @@ const OurFamilyData = [
       {
         name: "Team2 Someone",
         postion: "operation",
-        avatar: "/img/avatars/man-avatar.png",
+        avatar: "/img/avatars/avatar1.jpeg",
       },
 
       {
         name: "Team2 Someone",
         postion: "operation",
-        avatar: "/img/avatars/lady-avatar.png",
+        avatar: "/img/avatars/avatar2.jpeg",
       },
 
       {
         name: "Team2 Someone",
         postion: "operation",
-        avatar: "/img/avatars/man-avatar.png",
+        avatar: "/img/avatars/avatar3.jpeg",
       },
     ],
   },
@@ -52,19 +52,19 @@ const OurFamilyData = [
       {
         name: "Team3 Someone",
         postion: "operation",
-        avatar: "/img/avatars/man-avatar.png",
+        avatar: "/img/avatars/avatar1.jpeg",
       },
 
       {
         name: "Team3 Someone",
         postion: "operation",
-        avatar: "/img/avatars/lady-avatar.png",
+        avatar: "/img/avatars/avatar2.jpeg",
       },
 
       {
         name: "Team3 Someone",
         postion: "operation",
-        avatar: "/img/avatars/man-avatar.png",
+        avatar: "/img/avatars/avatar3.jpeg",
       },
     ],
   },

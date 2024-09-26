@@ -51,11 +51,11 @@ export const HomeFooter: FC<Record<string, never>> = function () {
                 <HiChevronRight className="w-5 h-5 inline" />
                 Our Family
               </Footer.Link>
-              <FooterDivider className="lg:mt-0 lg:mb-2 border-[#4f4b6b]" />
+              {/* <FooterDivider className="lg:mt-0 lg:mb-2 border-[#4f4b6b]" />
               <Footer.Link href="#partner-with" className="mb-2">
                 <HiChevronRight className="w-5 h-5 inline" />
                 Partner With
-              </Footer.Link>
+              </Footer.Link> */}
             </FooterLinkGroup>
           </div>
           <div className="flex flex-col mb-10  gap-4">

@@ -116,7 +116,7 @@ const CurrentProjectsData = [
       url: "https://m.facebook.com/supportlottery4burma",
     },
     rightCTA: {
-      btnLabel: "Ticket ဝယ်ရန်",
+      btnLabel: "Buy Ticket",
       countryFrList: [
         {
           currencyCode: "aud",
@@ -268,7 +268,7 @@ const CurrentProjectsData = [
       url: "https://m.facebook.com/supportlottery4burma",
     },
     rightCTA: {
-      btnLabel: "ထောက်ပို့မယ်",
+      btnLabel: "ပါဝင်ရန်",
       countryFrList: [
         {
           currencyCode: "eur",

@@ -61,7 +61,7 @@ export const HomeNavbar: FC<Record<string, never>> = function () {
           <Navbar.Collapse
             dir="ltr"
             className={twMerge(
-              "flex-1 w-full order-last md:order-none [&>ul]:md:text-base px-8 md:px-0 [&>ul>li]:pb-4 [&>ul>li]:md:pb-0",
+              " w-full order-last md:order-none [&>ul]:md:text-base px-8 md:px-0 [&>ul>li]:pb-4 [&>ul>li]:md:pb-0",
               navbarExpanded
                 ? "absolute top-14 left-0 block bg-white md:static"
                 : "hidden"
@@ -85,12 +85,12 @@ export const HomeNavbar: FC<Record<string, never>> = function () {
             <Navbar.Link href="#our-family" active={activeSection === "our-family"}>
               Our Family
             </Navbar.Link>
-            <Navbar.Link
+            {/* <Navbar.Link
               href="#partner-with"
               active={activeSection === "partner-with"}
             >
               Partner With
-            </Navbar.Link>
+            </Navbar.Link> */}
           </Navbar.Collapse>
           <div className="flex md:flex-1 md:justify-end">
             <Navbar.Toggle

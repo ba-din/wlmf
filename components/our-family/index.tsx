@@ -36,7 +36,7 @@ export default function OurFamily() {
             {
               OurFamilyData.length > 0 && OurFamilyData.map(({ icon, members }: { icon: String, members: Array<{ name: string, postion: string, avatar: string }>}, memberIndex) => (
                 <TabPanel key={'member-' + memberIndex}>
-                  <div className="w-full mt-3 grid grid-cols-3 gap-10 p-3 md:grid-cols-4 md:p-0">
+                  <div className="w-full mt-3 grid grid-cols-2 gap-10 p-3 lg:grid-cols-4 md:grid-cols-3 md:p-0">
                     {
                       members.map((member, index) => (
                         <div className="grid grid-cols-1 md:grid-cols-2" key={member.name + "_" + index}>

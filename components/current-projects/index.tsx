@@ -87,7 +87,7 @@ export default function CurrentProjects() {
                 onOk={() => setIsOpen(false)}
             />
 
-            <div className="mt-5 grid grid-cols-1 m-3 xl:grid-cols-5 lg:grid-cols-3ျအနော md:grid-cols-3 md:gap-4">
+            <div className="mt-5 grid grid-cols-1 m-3 xl:grid-cols-5 lg:grid-cols-3 md:grid-cols-3 md:gap-4">
                 {
                     CurrentProjectsData.map((project) => (
                         <div className="flex flex-col items-center justify-start mt-5 md:mt-0" key={project.title}>
@@ -111,7 +111,7 @@ export default function CurrentProjects() {
                                     <div className="flex items-center justify-between min-h-[40px]">
                                         {
                                             project.leftCTA ? (
-                                                <a href={project.leftCTA.url} target="blank" className="text-white bg-[#070E57] hover:bg-[#000980] focus:ring-4 focus:outline-none focus:ring-[#1828c9] font-medium rounded-lg text-sm px-5 py-2.5 text-center">
+                                                <a href={project.leftCTA.url} target="blank" className="text-white bg-[#070E57] hover:bg-[#000980] focus:ring-4 focus:outline-none focus:ring-[#1828c9] font-medium rounded-lg text-sm px-5 py-2.5 lg:px-3 lg:py-2  text-center">
                                                     {project.leftCTA.btnLabel}
                                                 </a>
                                             ) : (<div></div>)
@@ -122,7 +122,7 @@ export default function CurrentProjects() {
                                                 <a
                                                     href={project.rightCTA.url ? project.rightCTA.url : "#"}
                                                     target="blank"
-                                                    className="text-white bg-[#920100] hover:bg-[#750100] focus:ring-4 focus:outline-none focus:ring-[#8c1b1b] font-medium rounded-lg text-sm px-5 py-2.5 text-center"
+                                                    className="text-white bg-[#920100] hover:bg-[#750100] focus:ring-4 focus:outline-none focus:ring-[#8c1b1b] font-medium rounded-lg text-sm px-5 py-2.5  lg:px-3 lg:py-2text-center"
                                                     onClick={(event) => handleRightCtaBtn(event, { title: project.title, code: project.title, logoImg: project.logoImg, rightCTA: project.rightCTA})}
                                                 >
                                                     {project.rightCTA.btnLabel}
